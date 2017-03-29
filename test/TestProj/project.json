@@ -1,0 +1,26 @@
+﻿{
+  "title": "BaseUnitTest Project",
+  "version": "1.0.0-*",
+  "testRunner": "xunit",
+
+  "dependencies": {
+    "dotnet-test-xunit": "2.2.0-preview2-build1029",
+    "Microsoft.EntityFrameworkCore.InMemory": "1.1.1",
+    "Microsoft.EntityFrameworkCore.Sqlite": "1.1.1",
+    "TestLibrary": {
+      "target": "project"
+    },
+    "xunit": "2.2.0"
+  },
+
+  "frameworks": {
+    "netcoreapp1.1": {
+      "dependencies": {
+        "Microsoft.NETCore.App": {
+          "type": "platform",
+          "version": "1.1.1"
+        }
+      }
+    }
+  }
+}
