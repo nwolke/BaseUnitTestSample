@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This project is to showcase my solution for using a SQLite in-memory database for unit tests
+This project is to showcase my solution for using a SQLite in-memory database for unit tests and provide a means for streamlining the setup of the DbContext and any data seeding.
 
 ### Core Functionality
 
