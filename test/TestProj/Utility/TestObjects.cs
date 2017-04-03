@@ -2,6 +2,9 @@
 
 namespace TestProj.Utility
 {
+    /// <summary>
+    /// simple class for creating test objects
+    /// </summary>
     public static class TestObjects
     {
         public static TestModel CreateTestModel()

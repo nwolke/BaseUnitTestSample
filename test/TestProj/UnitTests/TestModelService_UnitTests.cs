@@ -9,8 +9,14 @@ using Xunit;
 
 namespace TestProj.UnitTests
 {
+    /// <summary>
+    /// Unit tests for TestModelService
+    /// </summary>
     public class TestModelService_UnitTests : BaseUnitTest
     {
+        /// <summary>
+        /// Assumed successful add of a TestModel object
+        /// </summary>
         [Fact]
         public async void AddTestModel_Success()
         {
@@ -32,6 +38,10 @@ namespace TestProj.UnitTests
             await RunTest(testaddmodel, assertaddmodel);
         }
 
+        /// <summary>
+        /// Assumed failure as the AddTestModel method of the TestModelService requires a unique Name for all records inserted.
+        /// Only applied this requirement to allow for a simple fail condition.
+        /// </summary>
         [Fact]
         public async void AddTestModel_FailUniqueName()
         {

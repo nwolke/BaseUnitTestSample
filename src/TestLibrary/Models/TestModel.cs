@@ -3,6 +3,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TestLibrary.Models
 {
+    /// <summary>
+    /// simple model
+    /// </summary>
     public class TestModel
     {
         [Key]

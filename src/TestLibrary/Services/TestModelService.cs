@@ -1,23 +1,32 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using TestLibrary.Models;
 
 namespace TestLibrary.Services
 {
-    public class TestModelService : ITestModelService
+    /// <summary>
+    /// simplified service
+    /// </summary>
+    public class TestModelService
     {
         private readonly ITestDbContext _dbcontext;
 
+        /// <summary>
+        /// constructor with dbcontext injected
+        /// </summary>
+        /// <param name="dbcontext"></param>
         public TestModelService(ITestDbContext dbcontext)
         {
             _dbcontext = dbcontext;
         }
 
-        // simplified add service method. 
-        // bool would not be the best option for a return value but this works for the sake of the sample code
+        /// <summary>
+        /// simplified add service method. 
+        /// bool would not be the best option for a return value but this works for the sake of the sample code
+        /// </summary>
+        /// <param name="model">model to be added</param>
+        /// <returns>True if success, False if failed in any way.</returns>
         public async Task<bool> AddTestModel(TestModel model)
         {
             var existingTestModels = await _dbcontext.TestModels.ToListAsync();
